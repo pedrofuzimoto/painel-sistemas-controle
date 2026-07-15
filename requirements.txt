@@ -1,0 +1,8 @@
+control==0.10.2
+matplotlib==3.11.0
+numpy==2.4.6
+scipy==1.18.0
+plotly==6.9.0
+reportlab==5.0.0
+streamlit==1.59.1
+

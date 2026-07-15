@@ -1,0 +1,15 @@
+.tools/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.streamlit/secrets.toml
+*.py[cod]
+*.aux
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.xdv
