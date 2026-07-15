@@ -1,0 +1,125 @@
+{
+  "source": {
+    "title": "Engenharia de Sistemas de Controle",
+    "author": "Norman S. Nise",
+    "edition": 6,
+    "file_name": "Engenharia_de_Sistemas_de_Controle_6_Edi.pdf",
+    "sha256": "10DEBDB224E46AF232786CC02E34888A898132E5F265C24B65B46EE308DA3DAC",
+    "page_numbering": "pdf_page identifica a página do arquivo PDF, não a numeração impressa"
+  },
+  "cases": [
+    {
+      "id": "nise_4_3",
+      "chapter": 4,
+      "example": "4.3",
+      "pdf_pages": [259],
+      "textbook_model": {
+        "role": "closed_loop",
+        "numerator": [36.0],
+        "denominator": [1.0, 4.2, 36.0]
+      },
+      "application_input": {
+        "role": "open_loop_equivalent",
+        "numerator": [36.0],
+        "denominator": [1.0, 4.2, 0.0]
+      },
+      "expected": {
+        "natural_frequency_rad_s": 6.0,
+        "damping_ratio": 0.35
+      }
+    },
+    {
+      "id": "nise_4_5",
+      "chapter": 4,
+      "example": "4.5",
+      "pdf_pages": [267],
+      "textbook_model": {
+        "role": "closed_loop",
+        "numerator": [100.0],
+        "denominator": [1.0, 15.0, 100.0]
+      },
+      "application_input": {
+        "role": "open_loop_equivalent",
+        "numerator": [100.0],
+        "denominator": [1.0, 15.0, 0.0]
+      },
+      "expected": {
+        "natural_frequency_rad_s": 10.0,
+        "damping_ratio": 0.75,
+        "peak_time_s": 0.475,
+        "overshoot_percent": 2.838,
+        "settling_time_approx_s": 0.533,
+        "rise_time_approx_s": 0.23
+      }
+    },
+    {
+      "id": "nise_7_1",
+      "chapter": 7,
+      "example": "7.1",
+      "pdf_pages": [511, 512],
+      "textbook_model": {
+        "role": "closed_loop",
+        "numerator": [5.0],
+        "denominator": [1.0, 7.0, 10.0]
+      },
+      "application_input": {
+        "role": "open_loop_equivalent",
+        "numerator": [5.0],
+        "denominator": [1.0, 7.0, 5.0]
+      },
+      "expected": {
+        "steady_state_value": 0.5,
+        "steady_state_error": 0.5
+      }
+    },
+    {
+      "id": "nise_8_5",
+      "chapter": 8,
+      "example": "8.5",
+      "pdf_pages": [596, 604],
+      "application_input": {
+        "role": "open_loop_without_variable_gain_k",
+        "numerator": [1.0, 3.0],
+        "denominator": [1.0, 7.0, 14.0, 8.0, 0.0]
+      },
+      "expected": {
+        "critical_gain": 9.65,
+        "imaginary_axis_frequency_rad_s": 1.59
+      }
+    },
+    {
+      "id": "nise_10_7",
+      "chapter": 10,
+      "example": "10.7",
+      "pdf_pages": [839, 840],
+      "application_input": {
+        "role": "open_loop_without_variable_gain_k",
+        "numerator": [1.0],
+        "denominator": [1.0, 4.0, 6.0, 4.0]
+      },
+      "expected": {
+        "critical_gain": 20.0,
+        "imaginary_axis_frequency_rad_s": 2.449489742783178,
+        "stable_below_critical_gain": true,
+        "marginal_at_critical_gain": true
+      }
+    },
+    {
+      "id": "nise_10_9",
+      "chapter": 10,
+      "example": "10.9",
+      "pdf_pages": [844, 845],
+      "application_input": {
+        "role": "open_loop_at_k_40",
+        "numerator": [40.0],
+        "denominator": [1.0, 11.0, 38.0, 40.0]
+      },
+      "expected": {
+        "initial_gain": 40.0,
+        "critical_gain_exact_response": 378.0,
+        "phase_crossover_rad_s": 6.16,
+        "gain_margin_db_rounded": 20.0
+      }
+    }
+  ]
+}
