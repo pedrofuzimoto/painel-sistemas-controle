@@ -28,6 +28,7 @@ from control_dashboard.visualization.plotly_charts import (
 
 ROOT = Path(__file__).resolve().parents[3]
 EXAMPLES_FILE = ROOT / "examples" / "reference_systems.json"
+LOGO_FILE = ROOT / "assets" / "pedro-control-logo.png"
 
 
 @st.cache_data(show_spinner=False)
@@ -67,6 +68,7 @@ def _initialize_state() -> None:
 
 def _sidebar_form() -> None:
     examples = _load_examples()
+    st.sidebar.caption("Mascote oficial em malha fechada 😄")
     st.sidebar.header("Modelo de malha aberta")
     st.sidebar.selectbox(
         "Exemplo",
@@ -349,12 +351,21 @@ def _report_tab(bundle: AnalysisBundle) -> None:
 
 
 def run_app() -> None:
-    st.set_page_config(page_title="Análise de Sistemas de Controle", page_icon="📈", layout="wide")
+    st.set_page_config(
+        page_title="Análise de Sistemas de Controle",
+        page_icon=str(LOGO_FILE),
+        layout="wide",
+    )
+    st.logo(str(LOGO_FILE), size="large", icon_image=str(LOGO_FILE))
     _initialize_state()
     _sidebar_form()
 
-    st.title("Análise de Sistemas de Controle")
-    st.caption("Sistemas SISO contínuos · realimentação negativa unitária · H(s)=1")
+    logo_column, title_column = st.columns([1, 7], vertical_alignment="center")
+    with logo_column:
+        st.image(str(LOGO_FILE), width=112)
+    with title_column:
+        st.title("Análise de Sistemas de Controle")
+        st.caption("Sistemas SISO contínuos · realimentação negativa unitária · H(s)=1")
     _show_submission_errors()
     bundle = st.session_state.analysis_bundle
     if bundle is None:
