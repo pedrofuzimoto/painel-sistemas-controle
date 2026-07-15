@@ -1,5 +1,9 @@
 # Painel de Análise de Sistemas de Controle
 
+[![Abrir no Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://painel-sistemas-controle.streamlit.app/)
+
+**Aplicação online:** https://painel-sistemas-controle.streamlit.app/
+
 Aplicação web em português para análise de sistemas SISO contínuos descritos por
 uma função de transferência de malha aberta.
 
@@ -41,4 +45,3 @@ python -m ruff check src tests streamlit_app.py
 O núcleo matemático em `src/control_dashboard/analysis` não depende da interface.
 Os resultados são consolidados em DTOs imutáveis e consumidos pelos renderizadores
 Plotly, Matplotlib e pelo gerador de relatórios ReportLab.
-
