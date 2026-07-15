@@ -40,6 +40,10 @@ python -m pytest
 python -m ruff check src tests streamlit_app.py
 ```
 
+O conjunto de regressão acadêmica compara polos, resposta temporal, erro em regime
+permanente, lugar das raízes, Nyquist e margens com exemplos da 6ª edição do livro de
+Norman S. Nise. Consulte [a validação e as tolerâncias adotadas](docs/validacao-nise.md).
+
 ## Arquitetura
 
 O núcleo matemático em `src/control_dashboard/analysis` não depende da interface.
